@@ -1,0 +1,129 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.welcome-container {
+  display: flex;
+  justify-content: baseline;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 20px;
+
+  img{
+    width: 150px;
+  }
+
+  h1 {
+    font-size: 2.5em;
+    color: #333;
+    margin-top: -30px;
+    margin-bottom: 40px;
+
+  }
+
+}
+
+.search-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+
+  label {
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 1.2em;
+  }
+
+  input,
+  select {
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+
+    &:focus {
+      outline: none;
+      border-color: #6cb2eb; // Cambia el color al enfocar el input
+    }
+  }
+
+  button {
+    padding: 15px;
+    background-color: #3498db; 
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-bottom: 25px;
+
+
+    &:hover {
+      background-color: #2980b9; /* Cambiado a tono más oscuro al pasar el ratón sobre el botón */
+    }
+  }
+}
+
+h2 {
+  font-size: 1.8em;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.medicos-container {
+  display: flex;
+  flex-wrap: wrap;
+
+  .medico-card {
+    width: 200px;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease; // Agrega una transición suave al efecto de transformación
+
+    &:hover {
+      transform: scale(1.05); // Efecto de escala al pasar el ratón sobre la tarjeta
+    }
+
+    img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
+    h3 {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    p {
+      color: #555;
+      font-size: 1em;
+    }
+  }
+}
+
+// Estilos responsivos
+@media screen and (max-width: 1024px) {
+  .medico-card {
+    width: calc(50% - 20px);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .medico-card {
+    width: calc(50% - 20px);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .medico-card {
+    width: 100%;
+  }
+}

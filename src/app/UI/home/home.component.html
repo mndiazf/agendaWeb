@@ -1,0 +1,32 @@
+<div class="container">
+
+  <div class="welcome-container">
+    <img src="../../../assets/centro-medico.jpg" alt="logo-img">
+    <h1>Bienvenido a tu Plataforma Médica</h1>
+  </div>
+
+  <div class="search-container">
+    <label for="nombreInput">Buscar por nombre:</label>
+    <input type="text" id="nombreInput" [(ngModel)]="query" placeholder="Ingrese el nombre del médico" (keyup.enter)="buscarMedicos()" />
+    <button (click)="buscarMedicos()">Buscar</button>
+
+    <label for="especialidadSelect">Buscar por especialidad:</label>
+    <select id="especialidadSelect" [(ngModel)]="selectedEspecialidadId" (change)="onEspecialidadSelected()">
+      <option value="" disabled selected>Seleccione una especialidad...</option>
+      <option *ngFor="let especialidad of especialidades" [value]="especialidad.id">
+        {{ especialidad.nombre }}
+      </option>
+    </select>
+  </div>
+  <h2>Médicos de la Especialidad:</h2>
+
+  <div class="medicos-container">
+    
+    <div class="medico-card" *ngFor="let medico of medicos" (click)="irADetalleMedico(medico.id)" >
+      <img src="../../../assets/6326055.png" alt="Foto de {{ medico.nombre }}">
+      <h3>{{ medico.nombre }} {{ medico.apellido }}</h3>
+      <p>Médico</p>
+    </div>
+  </div>
+
+</div>

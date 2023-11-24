@@ -1,0 +1,187 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.medico-details,
+.add-fecha-container,
+.fechas-horas-container {
+  background-color: #f8f8f8;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.medico-details{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 20px;
+  img{
+    display: flex;
+    width: 150px;
+    margin-right: 20px;
+
+  }
+}
+
+h2{
+  margin-bottom: 25px;
+}
+
+.agregar-fecha{
+  margin-left: 20px;
+  background-color: #2ecc71;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+
+.agregar-fecha:hover {
+  background-color: #2980b9;
+}
+
+.fecha-fisica{
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+}
+
+.listado{
+  margin-top: 40px;
+}
+
+.add-fecha-container {
+  background-color: #eaf6ff;
+}
+
+.fechas-horas-container {
+  background-color: #fff;
+  padding-left: 50px;
+}
+
+.fecha-container div {
+  display: flex;
+  align-items: center;
+}
+
+.fecha-container {
+  margin-bottom: 20px;
+    
+}
+
+.arrow-button,
+.add-hour-button,
+.update-button,
+.delete-button,
+.add-button,
+.close-button,
+.edit-button,
+.confirm-button {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  margin: 0 5px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.buttons-container{
+  padding: 5px;
+  padding-right: 10px;
+  margin-top: 10px;
+}
+
+.input-edit{
+  width: 320px;
+}
+
+.time-input{
+  width: 80px;
+  padding: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.agregar-container{
+  margin-bottom: 20px;
+}
+
+.arrow-button:hover,
+.add-hour-button:hover,
+.update-button:hover,
+.delete-button:hover,
+.add-button:hover,
+.close-button:hover,
+.edit-button:hover,
+.confirm-button:hover {
+  background-color: #2980b9;
+}
+
+.horas-container {
+  list-style: none;
+  padding: 0;
+}
+
+.hora {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.hora span {
+  margin-right: 10px;
+}
+
+.edit-button,
+.confirm-button {
+  background-color: #2ecc71;
+}
+
+.delete-button {
+  background-color: #e74c3c;
+}
+
+.close-button {
+  background-color: #34495e;
+}
+
+/* Estilos responsivos */
+@media only screen and (max-width: 600px) {
+  .container {
+    padding: 10px;
+  }
+
+  .medico-details,
+  .add-fecha-container,
+  .fechas-horas-container {
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+
+  .fechas-horas-container {
+    padding-left: 20px;
+    margin-bottom: 10px;
+  }
+
+  .arrow-button,
+  .add-hour-button,
+  .update-button,
+  .delete-button,
+  .add-button,
+  .close-button,
+  .edit-button,
+  .confirm-button {
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,95 @@
+<div class="container">
+
+
+  <div *ngIf="medico" class="medico-details">
+    <div>
+    <h2>Detalles del Médico</h2>
+    <p>{{ medico.nombre }} {{ medico.apellido }}</p>
+    <br>
+    <p>Email: {{ medico.email }}</p>
+  </div>
+    <img src="../../../assets/6326055.png" alt="userImg">
+    <!-- Otros detalles del médico -->
+  </div>
+
+  <div class="add-fecha-container">
+    <h2>Agregar Fecha de Disponibilidad</h2>
+    <mat-form-field>
+      <input matInput [matDatepicker]="picker" placeholder="Selecciona una fecha" [(ngModel)]="nuevaFecha">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    <button mat-raised-button color="primary" class="agregar-fecha" (click)="agregarFecha()">Agregar Fecha</button>
+  </div>
+
+
+
+  
+
+  <div *ngIf="fechasConHoras && fechasConHoras.length > 0" class="fechas-horas-container">
+    <h2>Fechas y Horas disponibles para el médico</h2>
+    <ul class="listado">
+      <li *ngFor="let fechaConHoras of fechasConHoras" class="fecha-container">
+        <div class="fecha-fisica">
+          <span>{{ fechaConHoras.fecha | date:'dd-MM-yyyy' }}</span>
+          <button class="arrow-button" (click)="toggleDatePicker(fechaConHoras)">
+            ▼
+          </button>
+          <button class="add-hour-button" (click)="toggleAddHourForm(fechaConHoras)">
+            +
+          </button>
+        </div>
+        <mat-form-field *ngIf="fechaConHoras.showDatePicker" class="input-edit">
+          <input matInput [matDatepicker]="picker" placeholder="Selecciona una fecha" [(ngModel)]="fechaConHoras.nuevaFecha">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+          <div class="buttons-container">
+          <button class="update-button" (click)="updateFecha(fechaConHoras)">
+            Actualizar
+          </button>
+          <button class="delete-button" (click)="deleteFecha(fechaConHoras)">
+            Eliminar fecha
+          </button>
+        </div>
+        </mat-form-field>
+        <div *ngIf="fechaConHoras.showAddHourForm" class="agregar-container">
+          <label for="hora">Agregar Hora:</label>
+          <!-- Utiliza ngx-material-timepicker para el formato HH:mm -->
+          <input placeholder="Time" [ngxTimepicker]="picker" [(ngModel)]="fechaConHoras.nuevaHora" [format]="24" class="time-input">
+          <ngx-material-timepicker #picker></ngx-material-timepicker>
+          
+          <button class="add-button" (click)="addHora(fechaConHoras)">
+            Agregar Hora
+          </button>
+          <button class="close-button" (click)="toggleAddHourForm(fechaConHoras)">
+            Cerrar
+          </button>
+        </div>
+        <ul *ngIf="fechaConHoras.horas && fechaConHoras.horas.length > 0" class="horas-container">
+          <li *ngFor="let hora of fechaConHoras.horas" class="hora">
+            <span>{{ hora.hora }}</span>
+            <button class="edit-button" (click)="toggleEditHora(fechaConHoras, hora)">
+              &#9660; Editar Hora
+            </button>
+            <div *ngIf="fechaConHoras.editingHora === hora">
+              <input placeholder="Time" [ngxTimepicker]="picker" [(ngModel)]="fechaConHoras.nuevaHora" [format]="24" class="time-input">
+              <ngx-material-timepicker #picker></ngx-material-timepicker>
+              <button class="confirm-button" (click)="confirmEditHora(fechaConHoras, hora)">
+                Confirmar
+              </button>
+              <button class="delete-button" (click)="borrarHora(hora)">
+                Borrar hora
+              </button>
+            </div>
+          </li>
+        </ul>
+        
+        
+      </li>
+    </ul>
+  </div>
+
+
+
+
+</div>
