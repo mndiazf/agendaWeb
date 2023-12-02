@@ -1,27 +1,95 @@
-# AgendaWeb
+# Agenda Web de disponibilidad de horario de medicos 📅 FRONT-END
+Aplicación basada en **Angular v 16.2**, **Spring Boot v3.1.5** y **PostgreSQL v16** que proporciona la funcionalidad de generar disponibilidad de horario de atencion de medicos segun fecha y hora por fecha.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.10.
+## Descripción 🔍
 
-## Development server
+Aplicación web integral para la gestión de disponibilidad de citas médicas, centrándose en la generación y visualización de la disponibilidad de horarios de atención de médicos. La plataforma permitirá a los usuarios, buscar médicos según especialidad, y generar horarios de atencion de los medicos de manera eficiente.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## 🚀 Tecnologías y Dependencias
 
-## Code scaffolding
+### Tecnologías principales
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- **node**: v20.10
+- **Angular**: v16.2
 
-## Build
+### Arquitectura de la aplicacion en la nube AWS - HOSTINGER
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+![diagrama funcionalidad(1)](https://github.com/mndiazf/agendaWeb/assets/110750463/863a7f38-4fd7-42f9-8ae3-6dc6b457fa59)
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Dependencias para levantar de manera local
 
-## Running end-to-end tests
+[**BACK-END Spring Boot - PostgreSQL**](https://github.com/mndiazf/asignar-horario-springboot.git)
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Funcionalidades 📐
 
-## Further help
+### Seleccionar medico por nombre o por especialidad
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+![imagen](https://github.com/mndiazf/agendaWeb/assets/110750463/58f1f42e-5417-43cf-9fb3-d53e125cc37a)
+
+### Agregar Fecha para el medico
+
+![imagen](https://github.com/mndiazf/agendaWeb/assets/110750463/002e32c6-d378-4af8-a566-d0266c9ee54e)
+
+### Editar o borrar fecha
+
+![imagen](https://github.com/mndiazf/agendaWeb/assets/110750463/fe8b14d7-4eeb-4d6c-9883-94ca1b18fdbb)
+
+### Agregar Hora
+
+![imagen](https://github.com/mndiazf/agendaWeb/assets/110750463/7c0a462a-0d50-4fcf-96be-5cfb853fda05)
+![imagen](https://github.com/mndiazf/agendaWeb/assets/110750463/82c77894-e824-447e-b3ed-3e4fb17390f9)
+
+### Editar o borrar fecha
+
+![imagen](https://github.com/mndiazf/agendaWeb/assets/110750463/4d329417-bf39-4cab-910b-4ee0f67792cd)
+
+
+
+
+# Instalación y Uso de manera local⚙️
+
+**Clonar el repositorio:**
+
+```bash
+git clone https://github.com/mndiazf/agendaWeb.git
+```
+
+**Navegar al directorio del proyecto:**
+
+```bash
+cd agendaWeb
+```
+
+**Instalar las dependencias:**
+
+```bash
+npm install
+```
+
+**Ejecutar la aplicación:**
+
+```bash
+ng serve
+```
+
+**Acceder a la aplicación de manera local:**
+Abre tu navegador y dirígete a `http://localhost:4200`.
+
+**Acceder a la aplicación via internet:**
+Abre tu navegador y dirígete a `http://agendaweb.tech`.
+
+
+## Desarrollador del Proyecto
+
+<table>
+    <tr>
+        <td><img src="https://github.com/mndiazf/insert-image-spring-boot/assets/110750463/79e9fe0e-a55c-4b68-9e86-2929d9e24683" width="100"></td>
+        <td>
+            <strong>Nombre:</strong> Manolo Diaz  :pencil2:<br>
+            <strong>Correo:</strong> mn.diaz.f@gmail.com  :envelope:<br>
+            <strong>LinkedIn:</strong> https://www.linkedin.com/in/manolo-diaz-fernandez-215567224/  :briefcase:<br>
+            <strong>GitHub:</strong> https://github.com/mndiazf  :octocat:
+        </td>
+    </tr>
+</table>
