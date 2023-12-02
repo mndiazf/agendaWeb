@@ -16,6 +16,11 @@ Aplicación web integral para la gestión de disponibilidad de citas médicas, c
 
 ![diagrama funcionalidad(1)](https://github.com/mndiazf/agendaWeb/assets/110750463/863a7f38-4fd7-42f9-8ae3-6dc6b457fa59)
 
+### Estado de las aplicaciones en la nube:
+
+FRONT-END en HOSTINGER: <img src="https://github.com/mndiazf/asignar-horario-springboot/assets/110750463/66a879f0-1fe1-4be4-9456-f066f3920c31" alt="Texto Alternativo" width="40"/> 
+
+BACK-END en AWS:   <img src="https://github.com/mndiazf/asignar-horario-springboot/assets/110750463/3182133b-3d41-49e7-bed4-c65c1cf5d055" alt="Texto Alternativo" width="40"/> 
 
 ### Dependencias para levantar de manera local
 
